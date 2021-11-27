@@ -10,8 +10,8 @@ services:
       - ./local_settings.py:/app/froide/froide/local_settings.py:ro
     environment:
       DJANGO_SETTINGS_MODULE: froide.local_settings
-    ports:
-      - "127.0.0.1:8000:8000"
+    # ports:
+    #   - "127.0.0.1:8000:8000"
     networks:
       - default
 
@@ -24,8 +24,8 @@ services:
       POSTGRES_USER: froide
       POSTGRES_DB: froide
       POSTGRES_PASSWORD: froide
-    ports:
-      - "127.0.0.1:5432:5432"
+    # ports:
+    #   - "127.0.0.1:5432:5432"
     networks:
       - default
 
@@ -41,7 +41,7 @@ services:
       - "cluster.routing.allocation.disk.watermark.low=3gb"
       - "cluster.routing.allocation.disk.watermark.high=2gb"
       - "cluster.routing.allocation.disk.watermark.flood_stage=1gb"
-    ports:
-      - "127.0.0.1:9200:9200"
+    # ports:
+    #   - "127.0.0.1:9200:9200"
     networks:
       - default
