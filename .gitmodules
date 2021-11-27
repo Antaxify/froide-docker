@@ -1,0 +1,3 @@
+[submodule "froide"]
+	path = froide
+	url = https://github.com/okfde/froide.git
