@@ -9,6 +9,12 @@ At first, clone this repository with its submodules. [The original Froide reposi
 git clone git@github.com:Reprostar/froide-docker.git --recurse-submodules
 ```
 
+In case you have already cloned this repo without _--recurse-submodules_ parameter, enter the project directory and run:
+```
+git submodule init
+git submodule update
+```
+
 Next, customize _local_settings.py_ to your needs (that's a copy of _froide/froide/local_settings.py.example_). For instructions on how to configure Froide, 
 please refer to the [official documentation](https://froide.readthedocs.io/en/latest/gettingstarted/) and look at the base configuration file located 
 at _froide/froide/settings.py_. As the most important part, you will probably need to perform a database migration, create a superuser and configure reverse proxy such as Nginx.
