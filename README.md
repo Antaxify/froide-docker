@@ -13,6 +13,8 @@ Next, customize _local_settings.py_ to your needs (that's a copy of _froide/froi
 please refer to the [official documentation](https://froide.readthedocs.io/en/latest/gettingstarted/) and look at the base configuration file located 
 at _froide/froide/settings.py_.
 
+When configuring credentials to the PostgreSQL and Elasticsearch services, use the defaults defined in the _docker-compose.yml_. Reminder that those services are not accessible by Froide on _localhost_, but on _db_ and _elasticsearch_ hostnames.
+
 If you're using docker-compose to deploy the app with sample PostGIS and Elasticsearch services, you can
 use _docker-compose.yml_ included in this repository. To modify its contents, you can create 
 a _docker-compose.override.yml_ file and alter settings from the original.
