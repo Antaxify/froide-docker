@@ -25,16 +25,16 @@ class Dev(Base):
 
     # INTERNAL_IPS = ('127.0.0.1',)
 
-    # DATABASES = {
-    #     'default': {
-    #         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-    #         'NAME': '',
-    #         'USER': '',
-    #         'PASSWORD': '',
-    #         'HOST': '',
-    #         'PORT': '',
-    #     }
-    # }
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.contrib.gis.db.backends.postgis',
+            'NAME': 'froide',
+            'USER': 'froide',
+            'PASSWORD': 'froide',
+            'HOST': 'db',
+            'PORT': '5432',
+        }
+    }
 
 
     # ELASTICSEARCH_INDEX_PREFIX = 'froide'
