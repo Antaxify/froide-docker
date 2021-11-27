@@ -8,6 +8,7 @@ services:
       - ./froide:/app/froide:rw
       - ./start.sh:/app/start.sh
       - ./local_settings.py:/app/froide/froide/local_settings.py:ro
+    working_dir: /app/froide
     environment:
       DJANGO_SETTINGS_MODULE: froide.local_settings
     # ports:
