@@ -11,7 +11,7 @@ git clone git@github.com:Reprostar/froide-docker.git --recurse-submodules
 
 Next, customize _local_settings.py_ to your needs (that's a copy of _froide/froide/local_settings.py.example_). For instructions on how to configure Froide, 
 please refer to the [official documentation](https://froide.readthedocs.io/en/latest/gettingstarted/) and look at the base configuration file located 
-at _froide/froide/settings.py_.
+at _froide/froide/settings.py_. As the most important part, you will probably need to perform a database migration, create a superuser and configure reverse proxy such as Nginx.
 
 When configuring credentials to the PostgreSQL and Elasticsearch services, use the defaults defined in the _docker-compose.yml_. Reminder that those services are not accessible by Froide on _localhost_, but on _db_ and _elasticsearch_ hostnames.
 
