@@ -32,4 +32,4 @@ COPY	./froide/requirements.txt /app/requirements.txt
 RUN	cd /app && \
 	pip3 install -r requirements.txt
 
-ENTRYPOINT ["/app/start.sh"]
+ENTRYPOINT ["/bin/bash", "/app/start.sh"]
