@@ -1,10 +1,12 @@
 # Dockerfile for Froide
-This repository contains a Dockerfile and docker-compose.yml for quick deployment of Froide using Docker. 
+This repository contains a Dockerfile and docker-compose.yml for quick deployment of Froide using Docker.
 The Dockerfile is based on Debian 10 (Buster) and provides all necessary dependencies to host a Froide instance, which are installed both from Debian repository and PyPI.
 
 
 ### What's the purpose of froide-docker?
-The purpose of this repository is to provide a quick way to kickstart an example Froide stack. We have not found any official deployment script for Docker, so if you were also looking for it - here you go :)
+The purpose of this repository is to provide a quick way to kickstart an example Froide stack. We have not found any official deployment script for Docker, so if you were also looking for it - here you go :) 
+
+Please note that this is **not a production-ready** deployment script, though.
 
 
 ### Usage
