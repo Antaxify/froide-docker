@@ -6,6 +6,7 @@ RUN	apt update -y && \
 		build-essential \
 		cmake \
 		git \
+		gettext \
 		imagemagick \
 		libffi-dev \
 		libpq-dev \
