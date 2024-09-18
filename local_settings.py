@@ -40,7 +40,7 @@ class Dev(Base):
     ELASTICSEARCH_INDEX_PREFIX = 'froide'
     ELASTICSEARCH_DSL = {
         'default': {
-           'hosts': 'elasticsearch:9200'
+           'hosts': 'http://elasticsearch:9200'
        },
     }
 

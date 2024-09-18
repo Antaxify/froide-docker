@@ -1,4 +1,4 @@
-FROM	debian:10
+FROM debian:12.4
 
 RUN	apt update -y && \
 	apt upgrade -y && \
@@ -22,15 +22,16 @@ RUN	apt update -y && \
 		rustc \
 		virtualenv
 
-RUN	pip3 install --upgrade pip && \
-	pip3 install wheel
-
 RUN	mkdir /app && \
 	mkdir /app/froide
 
-COPY	./froide/requirements.txt /app/requirements.txt
+RUN apt install -y pkg-config libpoppler-cpp-dev
+
+COPY ./froide/requirements.txt /app/requirements.txt
 
 RUN	cd /app && \
-	pip3 install -r requirements.txt
+	pip3 install -r requirements.txt --break-system-packages
+
+RUN apt install -y npm
 
 ENTRYPOINT ["/bin/bash", "/app/start.sh"]
